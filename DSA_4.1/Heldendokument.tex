@@ -1,0 +1,80 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DSA 4.1 Heldendokument by g0hl1n
+%   Source:  https://github.com/g0hl1n/DSA_LaTeX_Heldendokument
+%   Author:  Richard 'g0hl1n' Leitner <me@g0hl1n.net>
+%   Version: 0.1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\def \version{0.1}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{geometry} % for page dimensions
+\usepackage{fancyhdr} % for custom (fancy) headers and footers
+\usepackage{lastpage} % for pagecount
+\usepackage{graphicx} % for embedding graphics
+\usepackage{hyperref} % for urls and their appearence
+\usepackage{color}    % for colored text
+\usepackage{graphicx} % Required for including pictures
+\usepackage{float}    % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig}  % Allows in-line images such as the example fish picture
+\usepackage[table,usenames,dvipsnames]{xcolor} % for own color definitions and tables
+\usepackage{colortbl}
+\usepackage{multirow} % for multirowed columns in tables
+%\usepackage[parfill]{parskip}	% let paragraphs don't intend, but skip some space
+\usepackage{booktabs} % table rule magic
+\usepackage{array}
+
+\usepackage{egothic}
+\usepackage[T1]{fontenc}
+\renewcommand*{\familydefault}{\rmdefault}
+%\renewcommand*\sfdefault{egothic}
+%----------------------------------------------------------------------------------------
+%	DOCUMENT CONFIGRUATION
+%----------------------------------------------------------------------------------------
+\geometry{top=2mm,left=10mm,right=10mm,bottom=2mm,headsep=0mm,footskip=0mm}
+
+\linespread{1} % Line spacing
+
+\graphicspath{{./img/}}
+
+
+%Hyperlink setup
+\hypersetup{
+	pdftitle={DSA 4.1 Heldendokument},
+	pdfauthor={Richard 'g0hl1n' Leitner},
+	pdfsubject={Das Schwarze Auge},
+	pdfkeywords={DSA} {Heldendokument} {LaTeX},
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+% empty header & footer
+\def \footline{DSA 4.1 \LaTeX\ Heldendokument by g0hl1n - version \version\ -  \url{https://github.com/g0hl1n/DSA_LaTeX_Heldendokument} - \today}
+\pagestyle{empty}
+
+% COLORS:
+\definecolor{titlepagelinecolor}{HTML}{707070} % grey
+%\definecolor{titlepagelinecolor}{HTML}{007A04} % green
+
+% Table Configurations
+\renewcommand{\arraystretch}{1.4} % set the space between rows:
+\newcommand\VRule[1][\arrayrulewidth]{\vrule width #1} 
+
+%----------------------------------------------------------------------------------------
+%	Charakter Konfiguration
+%----------------------------------------------------------------------------------------
+\include{CharakterKonfiguration}
+
+\begin{document}
+\include{Seite_1}
+\newpage
+\include{Seite_2}
+\end{document}
