@@ -1,4 +1,5 @@
-DSA_LaTeX_Heldendokument
+DSA LaTeX Heldendokument
 ========================
 
-Ein LaTeX Heldendokument für "Das Schwarze Auge" 4.1
+Eine Sammlung von in LaTeX geschriebenen DSA Heldendokumenten.
+* DSA_4.1: Nachbau des originalen DSA 4.1 Heldendokuments
