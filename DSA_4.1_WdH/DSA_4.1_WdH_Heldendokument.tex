@@ -68,6 +68,14 @@
 \renewcommand{\arraystretch}{1.4} % set the space between rows:
 \newcommand\VRule[1][\arrayrulewidth]{\vrule width #1} 
 
+% cline with adjustable thickness
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{%
+  \noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+  \noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}%
+  \noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}%
+}
+
 %----------------------------------------------------------------------------------------
 %	Charakter Konfiguration
 %----------------------------------------------------------------------------------------
