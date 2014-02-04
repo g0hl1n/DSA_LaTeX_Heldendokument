@@ -21,11 +21,13 @@
 \def \CharakterTitel{}
 \def \CharakterSO{}
 
-\def \CharakterVorNachteileA{}
-\def \CharakterVorNachteileB{}
-\def \CharakterVorNachteileC{}
-\def \CharakterVorNachteileD{}
-\def \CharakterVorNachteileE{}
+%----------------------------
+%	Vor- und Nachteile
+\def \CharakterVorNachteileA{} % 1. Zeile
+\def \CharakterVorNachteileB{} % 2. Zeile
+\def \CharakterVorNachteileC{} % 3. Zeile
+\def \CharakterVorNachteileD{} % 4. Zeile
+\def \CharakterVorNachteileE{} % 5. Zeile
 
 %----------------------------
 %	Eigenschaften
@@ -115,6 +117,8 @@
 \def \BasisFKstart{0}
 \def \BasisFKaktuell{0}
 
+%----------------------------
+%	Abenteuerpunkte
 \def \APgesamt{0}
 \def \APeingesetzt{0}
 \def \APguthaben{0}
@@ -130,37 +134,386 @@
 \def \SFausserKampfF{}
 
 %----------------------------
+%	Gaben
+\def \GabeA{} % 1. Gabe:
+\def \GabeATaWL{}
+\def \GabeATaWR{}
+\def \GabeB{} % 2. Gabe:
+\def \GabeBTaWL{}
+\def \GabeBTaWR{}
+\def \GabeC{} % 3. Gabe:
+\def \GabeCTaWL{}
+\def \GabeCTaWR{}
+
+%----------------------------
 %	Talente
-% Kampftechniken
+% Basis Kampftechniken
+\def \TalentDolcheAT{0} % Dolche
+\def \TalentDolchePA{0}
+\def \TalentDolcheTaWL{0}
+\def \TalentDolcheTaWR{}
+\def \TalentHiebwaffenAT{0} % Hiebwaffen
+\def \TalentHiebwaffenPA{0}
+\def \TalentHiebwaffenTaWL{0}
+\def \TalentHiebwaffenTaWR{}
+\def \TalentRaufenAT{0} % Raufen
+\def \TalentRaufenPA{0}
+\def \TalentRaufenTaWL{0}
+\def \TalentRaufenTaWR{}
+\def \TalentRingenAT{0} % Ringen
+\def \TalentRingenPA{0}
+\def \TalentRingenTaWL{0}
+\def \TalentRingenTaWR{}
+\def \TalentSaebelAT{0} % Säbel
+\def \TalentSaebelPA{0}
+\def \TalentSaebelTaWL{0}
+\def \TalentSaebelTaWR{}
+\def \TalentWurfmesserAT{0} % Wurfmesser
+\def \TalentWurfmesserPA{0}
+\def \TalentWurfmesserTaWL{0}
+\def \TalentWurfmesserTaWR{}
 
-% Körperliche Talente
-\def \TalentAthletikL{0}
-\def \TalentAthletikR{0}
+% Extra Kampftechniken
+\def \TalentKampfExtraA{} % 1. extra Kampftechnik:
+\def \TalentKampfExtraASKat{}
+\def \TalentKampfExtraABE{}
+\def \TalentKampfExtraAAT{}
+\def \TalentKampfExtraAPA{}
+\def \TalentKampfExtraATaWL{}
+\def \TalentKampfExtraATaWR{}
+\def \TalentKampfExtraB{} % 2. extra Kampftechnik:
+\def \TalentKampfExtraBSKat{}
+\def \TalentKampfExtraBBE{}
+\def \TalentKampfExtraBAT{}
+\def \TalentKampfExtraBPA{}
+\def \TalentKampfExtraBTaWL{}
+\def \TalentKampfExtraBTaWR{}
+\def \TalentKampfExtraC{} % 3. extra Kampftechnik:
+\def \TalentKampfExtraCSKat{}
+\def \TalentKampfExtraCBE{}
+\def \TalentKampfExtraCAT{}
+\def \TalentKampfExtraCPA{}
+\def \TalentKampfExtraCTaWL{}
+\def \TalentKampfExtraCTaWR{}
+\def \TalentKampfExtraD{} % 4. extra Kampftechnik:
+\def \TalentKampfExtraDSKat{}
+\def \TalentKampfExtraDBE{}
+\def \TalentKampfExtraDAT{}
+\def \TalentKampfExtraDPA{}
+\def \TalentKampfExtraDTaWL{}
+\def \TalentKampfExtraDTaWR{}
+\def \TalentKampfExtraE{} % 5. extra Kampftechnik:
+\def \TalentKampfExtraESKat{}
+\def \TalentKampfExtraEBE{}
+\def \TalentKampfExtraEAT{}
+\def \TalentKampfExtraEPA{}
+\def \TalentKampfExtraETaWL{}
+\def \TalentKampfExtraETaWR{}
+\def \TalentKampfExtraF{} % 6. extra Kampftechnik:
+\def \TalentKampfExtraFSKat{}
+\def \TalentKampfExtraFBE{}
+\def \TalentKampfExtraFAT{}
+\def \TalentKampfExtraFPA{}
+\def \TalentKampfExtraFTaWL{}
+\def \TalentKampfExtraFTaWR{}
+\def \TalentKampfExtraG{} % 7. extra Kampftechnik:
+\def \TalentKampfExtraGSKat{}
+\def \TalentKampfExtraGBE{}
+\def \TalentKampfExtraGAT{}
+\def \TalentKampfExtraGPA{}
+\def \TalentKampfExtraGTaWL{}
+\def \TalentKampfExtraGTaWR{}
+\def \TalentKampfExtraH{} % 8. extra Kampftechnik:
+\def \TalentKampfExtraHSKat{}
+\def \TalentKampfExtraHBE{}
+\def \TalentKampfExtraHAT{}
+\def \TalentKampfExtraHPA{}
+\def \TalentKampfExtraHTaWL{}
+\def \TalentKampfExtraHTaWR{}
+\def \TalentKampfExtraI{} % 9. extra Kampftechnik:
+\def \TalentKampfExtraISKat{}
+\def \TalentKampfExtraIBE{}
+\def \TalentKampfExtraIAT{}
+\def \TalentKampfExtraIPA{}
+\def \TalentKampfExtraITaWL{}
+\def \TalentKampfExtraITaWR{}
+\def \TalentKampfExtraJ{} % 10. extra Kampftechnik
+\def \TalentKampfExtraJSKat{}
+\def \TalentKampfExtraJBE{}
+\def \TalentKampfExtraJAT{}
+\def \TalentKampfExtraJPA{}
+\def \TalentKampfExtraJTaWL{}
+\def \TalentKampfExtraJTaWR{}
 
-% Gesellschaftliche Talente
+% Basis Körperliche Talente
+\def \TalentAthletikTaWL{0} % Athletik
+\def \TalentAthletikTaWR{}
+\def \TalentKletternTaWL{0} % Klettern
+\def \TalentKletternTaWR{}
+\def \TalentKoerperbeherrschungTaWL{0} % Körperbeherrschung
+\def \TalentKoerperbeherrschungTaWR{}
+\def \TalentSchleichenTaWL{0} % Schleichen
+\def \TalentSchleichenTaWR{}
+\def \TalentSchwimmenTaWL{0} % Schwimmen
+\def \TalentSchwimmenTaWR{}
+\def \TalentSelbstbeherrschungTaWL{0} % Selbstbeherrschung
+\def \TalentSelbstbeherrschungTaWR{}
+\def \TalentSichVersteckenTaWL{0} % Sich Verstecken
+\def \TalentSichVersteckenTaWR{}
+\def \TalentSingenTaWL{0} % Singen
+\def \TalentSingenTaWR{}
+\def \TalentSinnesschaerfeTaWL{0} % Sinnesschärfe
+\def \TalentSinnesschaerfeTaWR{}
+\def \TalentTanzenTaWL{0} % Tanzen
+\def \TalentTanzenTaWR{}
+\def \TalentZechenTaWL{0} % Zechen
+\def \TalentZechenTaWR{}
 
-% Natur-Talente
-\def \TalentFaehrtensuchenL{0}
-\def \TalentFaehrtensuchenR{0}
-\def \TalentOrientierungL{0}
-\def \TalentOrientierungR{0}
-\def \TalentWildnislebenL{0}
-\def \TalentWildnislebenR{0}
-\def \TalentNaturExtraA{}
-\def \TalentNaturExtraAL{}
-\def \TalentNaturExtraAR{}
-\def \TalentNaturExtraB{}
-\def \TalentNaturExtraBL{}
-\def \TalentNaturExtraBR{}
-\def \TalentNaturExtraC{}
-\def \TalentNaturExtraCL{}
-\def \TalentNaturExtraCR{}
-\def \TalentNaturExtraD{}
-\def \TalentNaturExtraDL{}
-\def \TalentNaturExtraDR{}
+% Extra Körperliche Talente
+\def \TalentKoerperExtraA{} % 1. extra körperliches talent:
+\def \TalentKoerperExtraAProbe{}
+\def \TalentKoerperExtraABE{}
+\def \TalentKoerperExtraATaWL{}
+\def \TalentKoerperExtraATaWR{}
+\def \TalentKoerperExtraB{} % 2. extra körperliches talent:
+\def \TalentKoerperExtraBProbe{}
+\def \TalentKoerperExtraBBE{}
+\def \TalentKoerperExtraBTaWL{}
+\def \TalentKoerperExtraBTaWR{}
+\def \TalentKoerperExtraC{} % 3. extra körperliches talent:
+\def \TalentKoerperExtraCProbe{}
+\def \TalentKoerperExtraCBE{}
+\def \TalentKoerperExtraCTaWL{}
+\def \TalentKoerperExtraCTaWR{}
+\def \TalentKoerperExtraD{} % 4. extra körperliches talent:
+\def \TalentKoerperExtraDProbe{}
+\def \TalentKoerperExtraDBE{}
+\def \TalentKoerperExtraDTaWL{}
+\def \TalentKoerperExtraDTaWR{}
+\def \TalentKoerperExtraE{} % 5. extra körperliches talent:
+\def \TalentKoerperExtraEProbe{}
+\def \TalentKoerperExtraEBE{}
+\def \TalentKoerperExtraETaWL{}
+\def \TalentKoerperExtraETaWR{}
 
-% Wissenstalente
+% Basis Gesellschaftliche Talente
+\def \TalentMenschenkenntnisTaWL{0} % Menschenkenntnis
+\def \TalentMenschenkenntnisTaWR{}
+\def \TalentUeberredenTaWL{0} % Überreden
+\def \TalentUeberredenTaWR{}
+
+% Extra Gesellschaftliche Talente
+\def \TalentGesellschaftExtraA{} % 1. extra gesellschaftliches Talent:
+\def \TalentGesellschaftExtraAProbe{}
+\def \TalentGesellschaftExtraATaWL{}
+\def \TalentGesellschaftExtraATaWR{}
+\def \TalentGesellschaftExtraB{} % 2. extra gesellschaftliches Talent:
+\def \TalentGesellschaftExtraBProbe{}
+\def \TalentGesellschaftExtraBTaWL{}
+\def \TalentGesellschaftExtraBTaWR{}
+\def \TalentGesellschaftExtraC{} % 3. extra gesellschaftliches Talent:
+\def \TalentGesellschaftExtraCProbe{}
+\def \TalentGesellschaftExtraCTaWL{}
+\def \TalentGesellschaftExtraCTaWR{}
+\def \TalentGesellschaftExtraD{} % 4. extra gesellschaftliches Talent:
+\def \TalentGesellschaftExtraDProbe{}
+\def \TalentGesellschaftExtraDTaWL{}
+\def \TalentGesellschaftExtraDTaWR{}
+\def \TalentGesellschaftExtraE{} % 5. extra gesellschaftliches Talent:
+\def \TalentGesellschaftExtraEProbe{}
+\def \TalentGesellschaftExtraETaWL{}
+\def \TalentGesellschaftExtraETaWR{}
+
+% Basis Natur-Talente
+\def \TalentFaehrtensuchenTaWL{0} % Fährtensuchen
+\def \TalentFaehrtensuchenTaWR{}
+\def \TalentOrientierungTaWL{0} % Orientierung
+\def \TalentOrientierungTaWR{}
+\def \TalentWildnislebenTaWL{0} % Wildnisleben
+\def \TalentWildnislebenTaWR{}
+
+% Extra Natur-Talente
+\def \TalentNaturExtraA{} % 1. extra Natur-Talent:
+\def \TalentNaturExtraAProbe{}
+\def \TalentNaturExtraATaWL{}
+\def \TalentNaturExtraATaWR{}
+\def \TalentNaturExtraB{} % 2. extra Natur-Talent:
+\def \TalentNaturExtraBProbe{}
+\def \TalentNaturExtraBTaWL{}
+\def \TalentNaturExtraBTaWR{}
+\def \TalentNaturExtraC{} % 3. extra Natur-Talent:
+\def \TalentNaturExtraCProbe{}
+\def \TalentNaturExtraCTaWL{}
+\def \TalentNaturExtraCTaWR{}
+\def \TalentNaturExtraD{} % 4. extra Natur-Talent:
+\def \TalentNaturExtraDProbe{}
+\def \TalentNaturExtraDTaWL{}
+\def \TalentNaturExtraDTaWR{}
+
+% Basis Wissenstalente
+\def \TalentGoetterKulteTaWL{0} % Götter/Kulte
+\def \TalentGoetterKulteTaWR{}
+\def \TalentRechnenTaWL{0} % Rechnen
+\def \TalentRechnenTaWR{}
+\def \TalentSagenLegendenTaWL{0} % Sagen/Legenden
+\def \TalentSagenLegendenTaWR{}
+
+% Extra Wissenstalente
+\def \TalentWissenExtraA{} % 1. extra Wissenstalent:
+\def \TalentWissenExtraAProbe{}
+\def \TalentWissenExtraATaWL{}
+\def \TalentWissenExtraATaWR{}
+\def \TalentWissenExtraB{} % 2. extra Wissenstalent:
+\def \TalentWissenExtraBProbe{}
+\def \TalentWissenExtraBTaWL{}
+\def \TalentWissenExtraBTaWR{}
+\def \TalentWissenExtraC{} % 3. extra Wissenstalent:
+\def \TalentWissenExtraCProbe{}
+\def \TalentWissenExtraCTaWL{}
+\def \TalentWissenExtraCTaWR{}
+\def \TalentWissenExtraD{} % 4. extra Wissenstalent:
+\def \TalentWissenExtraDProbe{}
+\def \TalentWissenExtraDTaWL{}
+\def \TalentWissenExtraDTaWR{}
+\def \TalentWissenExtraE{} % 5. extra Wissenstalent:
+\def \TalentWissenExtraEProbe{}
+\def \TalentWissenExtraETaWL{}
+\def \TalentWissenExtraETaWR{}
+\def \TalentWissenExtraF{} % 6. extra Wissenstalent:
+\def \TalentWissenExtraFProbe{}
+\def \TalentWissenExtraFTaWL{}
+\def \TalentWissenExtraFTaWR{}
+\def \TalentWissenExtraG{} % 7. extra Wissenstalent:
+\def \TalentWissenExtraGProbe{}
+\def \TalentWissenExtraGTaWL{}
+\def \TalentWissenExtraGTaWR{}
+\def \TalentWissenExtraH{} % 8. extra Wissenstalent:
+\def \TalentWissenExtraHProbe{}
+\def \TalentWissenExtraHTaWL{}
+\def \TalentWissenExtraHTaWR{}
+\def \TalentWissenExtraI{} % 9. extra Wissenstalent:
+\def \TalentWissenExtraIProbe{}
+\def \TalentWissenExtraITaWL{}
+\def \TalentWissenExtraITaWR{}
+\def \TalentWissenExtraJ{} % 10. extra Wissenstalent:
+\def \TalentWissenExtraJProbe{}
+\def \TalentWissenExtraJTaWL{}
+\def \TalentWissenExtraJTaWR{}
+\def \TalentWissenExtraK{} % 11. extra Wissenstalent:
+\def \TalentWissenExtraKProbe{}
+\def \TalentWissenExtraKTaWL{}
+\def \TalentWissenExtraKTaWR{}
+\def \TalentWissenExtraL{} % 12. extra Wissenstalent:
+\def \TalentWissenExtraLProbe{}
+\def \TalentWissenExtraLTaWL{}
+\def \TalentWissenExtraLTaWR{}
+\def \TalentWissenExtraM{} % 13. extra Wissenstalent:
+\def \TalentWissenExtraMProbe{}
+\def \TalentWissenExtraMTaWL{}
+\def \TalentWissenExtraMTaWR{}
+\def \TalentWissenExtraN{} % 14. extra Wissenstalent:
+\def \TalentWissenExtraNProbe{}
+\def \TalentWissenExtraNTaWL{}
+\def \TalentWissenExtraNTaWR{}
 
 % Sprachen & Schriften
+\def \TalentMuttersprache{} % Muttersprache:
+\def \TalentMutterspracheKomp{} % Komplexität
+\def \TalentMutterspracheTaWL{}
+\def \TalentMutterspracheTaWR{}
+\def \TalentSpracheSchriftExtraA{} % 1. extra Sprache/Schrift:
+\def \TalentSpracheSchriftExtraAKomp{}
+\def \TalentSpracheSchriftExtraATaWL{}
+\def \TalentSpracheSchriftExtraATaWR{}
+\def \TalentSpracheSchriftExtraB{} % 2. extra Sprache/Schrift:
+\def \TalentSpracheSchriftExtraBKomp{}
+\def \TalentSpracheSchriftExtraBTaWL{}
+\def \TalentSpracheSchriftExtraBTaWR{}
+\def \TalentSpracheSchriftExtraC{} % 3. extra Sprache/Schrift:
+\def \TalentSpracheSchriftExtraCKomp{}
+\def \TalentSpracheSchriftExtraCTaWL{}
+\def \TalentSpracheSchriftExtraCTaWR{}
+\def \TalentSpracheSchriftExtraD{} % 4. extra Sprache/Schrift:
+\def \TalentSpracheSchriftExtraDKomp{}
+\def \TalentSpracheSchriftExtraDTaWL{}
+\def \TalentSpracheSchriftExtraDTaWR{}
+\def \TalentSpracheSchriftExtraE{} % 5. extra Sprache/Schrift:
+\def \TalentSpracheSchriftExtraEKomp{}
+\def \TalentSpracheSchriftExtraETaWL{}
+\def \TalentSpracheSchriftExtraETaWR{}
+\def \TalentSpracheSchriftExtraF{} % 6. extra Sprache/Schrift:
+\def \TalentSpracheSchriftExtraFKomp{}
+\def \TalentSpracheSchriftExtraFTaWL{}
+\def \TalentSpracheSchriftExtraFTaWR{}
+\def \TalentSpracheSchriftExtraG{} % 7. extra Sprache/Schrift:
+\def \TalentSpracheSchriftExtraGKomp{}
+\def \TalentSpracheSchriftExtraGTaWL{}
+\def \TalentSpracheSchriftExtraGTaWR{}
+\def \TalentSpracheSchriftExtraH{} % 8. extra Sprache/Schrift:
+\def \TalentSpracheSchriftExtraHKomp{}
+\def \TalentSpracheSchriftExtraHTaWL{}
+\def \TalentSpracheSchriftExtraHTaWR{}
+\def \TalentSpracheSchriftExtraI{} % 9. extra Sprache/Schrift:
+\def \TalentSpracheSchriftExtraIKomp{}
+\def \TalentSpracheSchriftExtraITaWL{}
+\def \TalentSpracheSchriftExtraITaWR{}
+\def \TalentSpracheSchriftExtraJ{} % 10. extra Sprache/Schrift:
+\def \TalentSpracheSchriftExtraJKomp{}
+\def \TalentSpracheSchriftExtraJTaWL{}
+\def \TalentSpracheSchriftExtraJTaWR{}
 
-% Handwerkliche Talente
+% Basis  Handwerkliche Talente
+\def \TalentHeilkundeWundenTaWL{0} % Heilkunde Wunden
+\def \TalentHeilkundeWundenTaWR{}
+\def \TalentHolzbearbeitungTaWL{0} % Holzbearbeitung
+\def \TalentHolzbearbeitungTaWR{}
+\def \TalentKochenTaWL{0} % Kochen
+\def \TalentKochenTaWR{}
+\def \TalentLederarbeitenTaWL{0} % Lederarbeiten
+\def \TalentLederarbeitenTaWR{}
+\def \TalentMalenZeichnenTaWL{0} % Malen/Zeichnen
+\def \TalentMalenZeichnenTaWR{}
+\def \TalentSchneidernTaWL{0} % Schneidern
+\def \TalentSchneidernTaWR{}
+
+% Extra Handwerkliche Talente
+\def \TalentHandwerkExtraA{} % 1. extra handwerkliches Talent:
+\def \TalentHandwerkExtraAProbe{}
+\def \TalentHandwerkExtraATaWL{}
+\def \TalentHandwerkExtraATaWR{}
+\def \TalentHandwerkExtraB{} % 2. extra handwerkliches Talent:
+\def \TalentHandwerkExtraBProbe{}
+\def \TalentHandwerkExtraBTaWL{}
+\def \TalentHandwerkExtraBTaWR{}
+\def \TalentHandwerkExtraC{} % 3. extra handwerkliches Talent:
+\def \TalentHandwerkExtraCProbe{}
+\def \TalentHandwerkExtraCTaWL{}
+\def \TalentHandwerkExtraCTaWR{}
+\def \TalentHandwerkExtraD{} % 4. extra handwerkliches Talent:
+\def \TalentHandwerkExtraDProbe{}
+\def \TalentHandwerkExtraDTaWL{}
+\def \TalentHandwerkExtraDTaWR{}
+\def \TalentHandwerkExtraE{} % 5. extra handwerkliches Talent:
+\def \TalentHandwerkExtraEProbe{}
+\def \TalentHandwerkExtraETaWL{}
+\def \TalentHandwerkExtraETaWR{}
+\def \TalentHandwerkExtraF{} % 6. extra handwerkliches Talent:
+\def \TalentHandwerkExtraFProbe{}
+\def \TalentHandwerkExtraFTaWL{}
+\def \TalentHandwerkExtraFTaWR{}
+\def \TalentHandwerkExtraG{} % 7. extra handwerkliches Talent:
+\def \TalentHandwerkExtraGProbe{}
+\def \TalentHandwerkExtraGTaWL{}
+\def \TalentHandwerkExtraGTaWR{}
+\def \TalentHandwerkExtraH{} % 8. extra handwerkliches Talent:
+\def \TalentHandwerkExtraHProbe{}
+\def \TalentHandwerkExtraHTaWL{}
+\def \TalentHandwerkExtraHTaWR{}
+\def \TalentHandwerkExtraI{} % 9. extra handwerkliches Talent:
+\def \TalentHandwerkExtraIProbe{}
+\def \TalentHandwerkExtraITaWL{}
+\def \TalentHandwerkExtraITaWR{}
+\def \TalentHandwerkExtraJ{} % 10. extra handwerkliches Talent:
+\def \TalentHandwerkExtraJProbe{}
+\def \TalentHandwerkExtraJTaWL{}
+\def \TalentHandwerkExtraJTaWR{}
