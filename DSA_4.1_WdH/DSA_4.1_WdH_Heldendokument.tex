@@ -8,6 +8,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 
+% Version des Dokuments:
 \def \version{0.1}
 
 %----------------------------------------------------------------------------------------
@@ -25,25 +26,18 @@
 \usepackage[table,usenames,dvipsnames]{xcolor} % for own color definitions and tables
 \usepackage{colortbl}
 \usepackage{multirow} % for multirowed columns in tables
-%\usepackage[parfill]{parskip}	% let paragraphs don't intend, but skip some space
 \usepackage{booktabs} % table rule magic
 \usepackage{array}
 
-\usepackage{egothic}
-\usepackage[T1]{fontenc}
-\renewcommand*{\familydefault}{\rmdefault}
-%\renewcommand*\sfdefault{egothic}
 %----------------------------------------------------------------------------------------
-%	DOCUMENT CONFIGRUATION
+%	KONFIGURATION DES DOKUMENTS (Layout, Farben & Metadaten)
 %----------------------------------------------------------------------------------------
-\geometry{top=2mm,left=10mm,right=10mm,bottom=2mm,headsep=0mm,footskip=0mm}
+\geometry{top=2mm,left=10mm,right=10mm,bottom=2mm,headsep=0mm,footskip=0mm} % Seitenränder
 
-\linespread{1} % Line spacing
+\linespread{1} % Zeilenabstand=1
+\graphicspath{{./img/}} % setzt den Pfad zu Grafiken
 
-\graphicspath{{./img/}}
-
-
-%Hyperlink setup
+% Hyperlink Metadata & Link Konfiguration
 \hypersetup{
 	pdftitle={DSA 4.1 Heldendokument},
 	pdfauthor={Richard 'g0hl1n' Leitner},
@@ -56,19 +50,26 @@
 	urlcolor=black
 }
 
-% empty header & footer
+%-----------------------------------
+% Seitenlayout:
+\pagestyle{empty} % "Leeres" Seitenlayout (keine Kopf- & Fußzeilen)
 \def \footline{DSA 4.1 \LaTeX\ Heldendokument by g0hl1n - version \version\ -  \url{https://github.com/g0hl1n/DSA_LaTeX_Heldendokument} - \today}
-\pagestyle{empty}
 
-% COLORS:
-\definecolor{titlepagelinecolor}{HTML}{707070} % grey
-%\definecolor{titlepagelinecolor}{HTML}{007A04} % green
+%-----------------------------------
+% Farben:
+\definecolor{titlepagelinecolor}{HTML}{707070} % Grau
 
-% Table Configurations
-\renewcommand{\arraystretch}{1.4} % set the space between rows:
-\newcommand\VRule[1][\arrayrulewidth]{\vrule width #1} 
+%-----------------------------------
+% (globale) Tabellenkonfiguration:
+\renewcommand{\arraystretch}{1.4} % Abstand zwischen Zellen
 
-% cline with adjustable thickness
+%----------------------------------------------------------------------------------------
+%	DEFINITION EIGENER KOMMANDOS
+%----------------------------------------------------------------------------------------
+% VRule
+\newcommand\VRule[1][\arrayrulewidth]{\vrule width #1}
+
+% Cline ... eine cline mit konfigurierbarer Dicke
 \newlength{\Oldarrayrulewidth}
 \newcommand{\Cline}[2]{%
   \noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
@@ -77,12 +78,12 @@
 }
 
 %----------------------------------------------------------------------------------------
-%	Charakter Konfiguration
+%	BEGINN DES DOKUMENTS
 %----------------------------------------------------------------------------------------
-\include{CharakterKonfiguration}
+\include{CharakterKonfiguration} % Charakter Konfiguration laden
 
 \begin{document}
-\include{Seite_1}
+\include{Seite_1} % erste Seite
 \newpage
-\include{Seite_2}
+\include{Seite_2} % zweite Seite
 \end{document}
