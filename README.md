@@ -3,9 +3,11 @@
 Eine Sammlung von in LaTeX geschriebenen DSA Heldendokumenten.
 Im Folgenden sind die hier verfügbaren Heldendokumente kurz beschrieben.
 
-Bei Anregungen/Wünschen/Patches bitte einfach die Github Features (Issues/Pull-Requests) nutzen, vielen Dank! ;-)
+Falls es Fragen gibt kontaktieren Sie mich einfach unter me[at]g0hl1n.net
 
-### DSA_4.1_WdH - "Wege der Helden" ###
+Bei Anregungen/Wünschen/Patches bitte einfach die Github Features (Issues/Pull-Requests) nutzen, vielen Dank!
+
+## DSA_4.1_WdH - "Wege der Helden" ##
 Ein Nachbau des originalen DSA 4.1 "Wege der Helden" Heldendokuments.
 Das Original kann auf der Homepage von Ulisses Spiele unter folgendem Link heruntergeladen werden: http://www.ulisses-spiele.de/download/559/
 
