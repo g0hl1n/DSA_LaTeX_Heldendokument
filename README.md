@@ -7,6 +7,8 @@ Falls es Fragen gibt kontaktieren Sie mich einfach unter me[at]g0hl1n.net
 
 Bei Anregungen/Wünschen/Patches bitte einfach die Github Features (Issues/Pull-Requests) nutzen, vielen Dank!
 
+Alle Versionsbundles können unter https://github.com/g0hl1n/DSA_LaTeX_Heldendokument/releases eingesehen und heruntergeladen werden.
+
 ## DSA_4.1_WdH - "Wege der Helden" ##
 Ein Nachbau des originalen DSA 4.1 "Wege der Helden" Heldendokuments.
 Das Original kann auf der Homepage von Ulisses Spiele unter folgendem Link heruntergeladen werden: http://www.ulisses-spiele.de/download/559/
