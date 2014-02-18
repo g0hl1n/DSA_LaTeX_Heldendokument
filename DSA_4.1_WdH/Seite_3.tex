@@ -131,13 +131,13 @@ Ringen & \WaffenlosRingenTPKK & \WaffenlosRingenINI & \WaffenlosRingenAT & \Waff
 	}
 \specialrule{3pt}{0pt}{0pt}
 \textbf{Rüstungsstück}   & \textbf{RS}   & \textbf{BE}\\\hline
-&&\\\hline
-&&\\\hline
-&&\\\hline
-&&\\\hline
-&&\\\hline
-\textbf{Summe} & &\\\hline
-\multicolumn{2}{!{\VRule[3pt]}l|}{\footnotesize Rüstungsgewöhnung $\square$ I, $\square$ II, $\square$ III}&\\
+\RuestungA & \RuestungARS & \RuestungABE \\\hline
+\RuestungB & \RuestungBRS & \RuestungBBE \\\hline
+\RuestungC & \RuestungCRS & \RuestungCBE \\\hline
+\RuestungD & \RuestungDRS & \RuestungDBE \\\hline
+\RuestungE & \RuestungERS & \RuestungEBE \\\hline
+\textbf{Summe} & \RuestungSummeRS & \RuestungSummeBE \\\hline
+\multicolumn{2}{!{\VRule[3pt]}l|}{\footnotesize Rüstungsgewöhnung $\square$ I, $\square$ II, $\square$ III} & \RuestungsgewoehnungWert\\
 \specialrule{3pt}{0pt}{0pt}
 \end{tabular}
 \renewcommand{\arraystretch}{0.8}
@@ -179,8 +179,8 @@ Ringen & \WaffenlosRingenTPKK & \WaffenlosRingenINI & \WaffenlosRingenAT & \Waff
 	}
 \specialrule{3pt}{0pt}{0pt}
 & max. & 1/2 & 1/3 & 1/4 & aktuell\\\hline
-\textbf{Lebensenergie} &&&&&\\\hline
-\textbf{Ausdauer} &&&&&\\
+\textbf{Lebensenergie} & \BasisLEaktuell & \BasisLEaktuellHaelfte & \BasisLEaktuellDrittel & \BasisLEaktuellViertel &\\\hline
+\textbf{Ausdauer} & \BasisAUaktuell & \BasisAUaktuellHaelfte & \BasisAUaktuellDrittel & \BasisAUaktuellViertel &\\
 \specialrule{3pt}{0pt}{0pt}
 \end{tabular}\\[2mm]
 \begin{tabular}{
@@ -191,8 +191,8 @@ Ringen & \WaffenlosRingenTPKK & \WaffenlosRingenINI & \WaffenlosRingenAT & \Waff
 	}
 \specialrule{3pt}{0pt}{0pt}
 & max. & aktuell\\\hline
-\textbf{Astralenergie} &&\\\hline
-\textbf{Karmaenergie} &&\\
+\textbf{Astralenergie} & \BasisAEaktuell &\\\hline
+\textbf{Karmaenergie} & \BasisKEaktuell &\\
 \specialrule{3pt}{0pt}{0pt}
 \end{tabular}\\[2mm]
 \begin{tabular}{
@@ -201,7 +201,7 @@ Ringen & \WaffenlosRingenTPKK & \WaffenlosRingenINI & \WaffenlosRingenAT & \Waff
 		!{\VRule[3pt]}
 	}
 \specialrule{3pt}{0pt}{0pt}
-\textbf{Initiative} & INI-Basis - BE = \underline{0} $\pm$ Mod. + W6 (bei SF Klingentänzer +2W6) = \underline{0}\\
+\textbf{Initiative} & INI-Basis - BE = \underline{\BasisINIaktuell} $\pm$ Mod. + W6 (bei SF Klingentänzer +2W6) = \underline{\ \ \ \ \ }\\
 \specialrule{3pt}{0pt}{0pt}
 \end{tabular}
 }
