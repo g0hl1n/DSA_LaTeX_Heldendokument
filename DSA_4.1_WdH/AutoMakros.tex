@@ -1,4 +1,32 @@
 %----------------------------
+%	The fancy stuff
+% dieses Makro gibt das Zeichen für eine Sonderfertigkeit zurück
+% Also angekreuzt wenn gewählt und leer wenn nicht
+\newcommand{\SFKreuzchen}[1]{%
+\def \dasKreuzchen{$\boxtimes$}%<-- das Kreuzchen Symbol
+\def \dasErgebnis{$\square$}%<-- das NichtKreuzchen Symbol
+\findwords[q]{\SonderfertigkeitenNahkampfA}{#1}\ifnum\theresult>0\def \dasErgebnis{\dasKreuzchen}
+\else
+\findwords[q]{\SonderfertigkeitenNahkampfB}{#1}\ifnum\theresult>0\def \dasErgebnis{\dasKreuzchen}
+\else
+\findwords[q]{\SonderfertigkeitenNahkampfC}{#1}\ifnum\theresult>0\def \dasErgebnis{\dasKreuzchen}
+\else
+\findwords[q]{\SFausserKampfA}{#1}\ifnum\theresult>0\def \dasErgebnis{\dasKreuzchen}
+\else
+\findwords[q]{\SFausserKampfA}{#1}\ifnum\theresult>0\def \dasErgebnis{\dasKreuzchen}
+\else
+\findwords[q]{\SFausserKampfA}{#1}\ifnum\theresult>0\def \dasErgebnis{\dasKreuzchen}
+\else
+\findwords[q]{\SFausserKampfA}{#1}\ifnum\theresult>0\def \dasErgebnis{\dasKreuzchen}
+\else
+\findwords[q]{\SFausserKampfA}{#1}\ifnum\theresult>0\def \dasErgebnis{\dasKreuzchen}
+\else
+\findwords[q]{\SFausserKampfA}{#1}\ifnum\theresult>0\def \dasErgebnis{\dasKreuzchen}
+\fi\fi\fi\fi\fi\fi\fi\fi\fi
+\dasErgebnis
+}
+
+%----------------------------
 %	Kampfwerte
 \def \KampfwerteTrenner{\ $\bullet$\ }
 % Basis Kampftechniken

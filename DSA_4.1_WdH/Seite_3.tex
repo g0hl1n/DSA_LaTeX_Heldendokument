@@ -116,7 +116,7 @@ Ringen & \WaffenlosRingenTPKK & \WaffenlosRingenINI & \WaffenlosRingenAT & \Waff
 \textbf{Name} & \textbf{Typ} & \textbf{INI} & \textbf{WM} & \textbf{PA} & \multicolumn{5}{c!{\VRule[3pt]}}{\textbf{Bruchfaktor}}\\\specialrule{1.5pt}{0pt}{0pt}
 \WaffeSchildA & \WaffeSchildATyp & \WaffeSchildAINI & \WaffeSchildAWM & \WaffeSchildAPA & \WaffeSchildABFa & \WaffeSchildABFb & \WaffeSchildABFc & \WaffeSchildABFd & \WaffeSchildABFe \\\hline
 \WaffeSchildB & \WaffeSchildBTyp & \WaffeSchildBINI & \WaffeSchildBWM & \WaffeSchildBPA & \WaffeSchildBBFa & \WaffeSchildBBFb & \WaffeSchildBBFc & \WaffeSchildBBFd & \WaffeSchildBBFe \\\specialrule{2pt}{0pt}{0pt}
-\multicolumn{10}{!{\VRule[3pt]}l!{\VRule[3pt]}}{$\square$ Linkhand (PA+1), $\square$ Schildkampf I (PA+2)/$\square$II (PA+2), $\square$ Parierwaffen I / $\square$ II}\\
+\multicolumn{10}{!{\VRule[3pt]}l!{\VRule[3pt]}}{\SFKreuzchen{Linkhand}Linkhand (PA+1), \SFKreuzchen{Schildkampf I}Schildkampf I (PA+2)/\SFKreuzchen{Schildkampf II}II (PA+2), \SFKreuzchen{Parierwaffen I}Parierwaffen I / \SFKreuzchen{Parierwaffen II}II}\\
 \specialrule{3pt}{0pt}{0pt}
 \end{tabular}
 \\[2mm]
@@ -137,7 +137,7 @@ Ringen & \WaffenlosRingenTPKK & \WaffenlosRingenINI & \WaffenlosRingenAT & \Waff
 \RuestungD & \RuestungDRS & \RuestungDBE \\\hline
 \RuestungE & \RuestungERS & \RuestungEBE \\\hline
 \textbf{Summe} & \RuestungSummeRS & \RuestungSummeBE \\\hline
-\multicolumn{2}{!{\VRule[3pt]}l|}{\footnotesize Rüstungsgewöhnung $\square$ I, $\square$ II, $\square$ III} & \RuestungsgewoehnungWert\\
+\multicolumn{2}{!{\VRule[3pt]}l|}{\footnotesize Rüstungsgewöhnung \SFKreuzchen{Rüstungsgewöhnung I} I, \SFKreuzchen{Rüstungsgewöhnung II} II, \SFKreuzchen{Rüstungsgewöhnung III} III} & \RuestungsgewoehnungWert\\
 \specialrule{3pt}{0pt}{0pt}
 \end{tabular}
 \renewcommand{\arraystretch}{0.8}
@@ -150,9 +150,9 @@ Ringen & \WaffenlosRingenTPKK & \WaffenlosRingenINI & \WaffenlosRingenAT & \Waff
 	}
 \specialrule{3pt}{0pt}{0pt}
 \scriptsize\textbf{PABasis} & \scriptsize\textbf{BE} & \scriptsize\textbf{Sonderfertigkeiten} &  \scriptsize\textbf{Summe}\\
-\multirow{4}{*}{\Large\textbf{\BasisPAaktuell \ -}} & \multirow{4}{*}{\Large\textbf{\RuestungSummeBE +}} & {\tiny$\square$Ausweichen I (+3)} & \multirow{4}{*}{\Large\textbf{=\AusweichenSumme}}\\
-&& {\tiny$\square$Ausweichen II (+3)} &\\
-&& {\tiny$\square$Ausweichen III (+3)} &\\
+\multirow{4}{*}{\Large\textbf{\BasisPAaktuell \ -}} & \multirow{4}{*}{\Large\textbf{\RuestungSummeBE +}} & {\tiny\SFKreuzchen{Ausweichen I}Ausweichen I (+3)} & \multirow{4}{*}{\Large\textbf{=\AusweichenSumme}}\\
+&& {\tiny\SFKreuzchen{Ausweichen II}Ausweichen II (+3)} &\\
+&& {\tiny\SFKreuzchen{Ausweichen III}Ausweichen III (+3)} &\\
 && {\tiny Akrobatik?Flink/Behäbig?} &\\
 \specialrule{3pt}{0pt}{0pt}
 \multicolumn{4}{c}{}\\
