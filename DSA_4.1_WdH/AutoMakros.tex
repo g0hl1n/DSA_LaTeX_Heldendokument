@@ -5,11 +5,9 @@
 \def \dasKreuzchen{$\boxtimes$}%<-- das Kreuzchen Symbol
 \def \dasNichtKreuzchen{$\square$}%<-- das NichtKreuzchen Symbol
 \newcommand{\SFKreuzchen}[1]{%
-\findwords[q]{\SonderfertigkeitenNahkampfA\SonderfertigkeitenNahkampfB\SonderfertigkeitenNahkampfC
+\IfSubStr{\SonderfertigkeitenNahkampfA\SonderfertigkeitenNahkampfB\SonderfertigkeitenNahkampfC
 \SFausserKampfA\SFausserKampfB\SFausserKampfC\SFausserKampfD\SFausserKampfE\SFausserKampfF}{#1}
-\ifnum\theresult>0 \dasKreuzchen
-\else \dasNichtKreuzchen
-\fi
+{\dasKreuzchen}{\dasNichtKreuzchen}%
 }
 
 %----------------------------
