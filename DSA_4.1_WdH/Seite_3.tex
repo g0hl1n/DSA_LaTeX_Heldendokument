@@ -140,28 +140,28 @@ Ringen & \WaffenlosRingenTPKK & \WaffenlosRingenINI & \WaffenlosRingenAT & \Waff
 \multicolumn{2}{!{\VRule[3pt]}l|}{\footnotesize Rüstungsgewöhnung \SFKreuzchen{Rüstungsgewöhnung I}I, \SFKreuzchen{Rüstungsgewöhnung II}II, \SFKreuzchen{Rüstungsgewöhnung III}III} & \RuestungsgewoehnungWert\\
 \specialrule{3pt}{0pt}{0pt}
 \end{tabular}
-\renewcommand{\arraystretch}{0.8}
+\renewcommand{\arraystretch}{0.75}
 \begin{tabular}{
-		!{\VRule[3pt]}p{10mm} %
-		p{7mm} %
-		p{27mm} %
-		p{10mm} %
+		!{\VRule[3pt]}@{ }>{\centering\arraybackslash}p{10mm}% @{} Redefiniert den Standard Left-Margin-Wert. Leerzeichen sind Abstand
+		@{}>{\centering\arraybackslash}p{10mm} %
+		@{ }p{30mm}@{} %
+		>{\centering\arraybackslash}p{12mm}@{} %
 		!{\VRule[3pt]}
 	}
 \specialrule{3pt}{0pt}{0pt}
-\scriptsize\textbf{PABasis} & \scriptsize\textbf{BE} & \scriptsize\textbf{Sonderfertigkeiten} &  \scriptsize\textbf{Summe}\\
-\multirow{4}{*}{\Large\textbf{\BasisPAaktuell \ -}} & \multirow{4}{*}{\Large\textbf{\RuestungSummeBE +}} & {\tiny\SFKreuzchen{Ausweichen~I}Ausweichen I (+3)} & \multirow{4}{*}{\Large\textbf{=\AusweichenSumme}}\\
+\tiny\textbf{PABasis} & \tiny\textbf{BE} & \tiny\textbf{Sonderfertigkeiten} &  \tiny\textbf{Summe}\\
+\multirow{4}{*}{\large\textbf{\BasisPAaktuell \ $-$}} & \multirow{4}{*}{\large\textbf{\RuestungSummeBE \ +}} & {\tiny\SFKreuzchen{Ausweichen~I}Ausweichen I (+3)} & \multirow{4}{*}{\large\textbf{$=$ \AusweichenSumme}}\\
 && {\tiny\SFKreuzchen{Ausweichen~II}Ausweichen II (+3)} &\\
 && {\tiny\SFKreuzchen{Ausweichen~III}Ausweichen III (+3)} &\\
-&& {\tiny Akrobatik?Flink/Behäbig?} &\\
+&& {\tiny Akrobatik? Flink/Behäbig?} &\\
 \specialrule{3pt}{0pt}{0pt}
 \multicolumn{4}{c}{}\\
-\multicolumn{4}{c}{\Large\textbf{Wunden}}\\
+\multicolumn{4}{c}{\Large\textbf{Wunden}}\\[1mm]
 \specialrule{3pt}{0pt}{0pt}
 &&&\\
 \multicolumn{4}{!{\VRule[3pt]}c!{\VRule[3pt]}}{\Large$\bigcirc$ $\bigcirc$ $\bigcirc$ $\bigcirc$ $\bigcirc$ $\bigcirc$ $\bigcirc$ $\bigcirc$ $\bigcirc$}\\
 &&&\\
-\multicolumn{4}{!{\VRule[3pt]}c!{\VRule[3pt]}}{\textbf{je Wunde AT,PA,FK,GE,INI-2; GS-1}}\\
+\multicolumn{4}{!{\VRule[3pt]}c!{\VRule[3pt]}}{\footnotesize\textbf{je Wunde AT,PA,FK,GE,INI-2; GS-1}}\\ % \footnotesize = Standardsize - 2pt
 \specialrule{3pt}{0pt}{0pt}
 \end{tabular}\\[2.5mm]
 %-----------------------------------------------------------------------------
