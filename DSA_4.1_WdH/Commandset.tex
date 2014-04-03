@@ -1,0 +1,38 @@
+\makeatletter
+
+%----------------------------
+%	Zauberzeug
+\newcounter{ZauberAnzahl}
+\def\ZauberTabelleInhaltA{}
+\def\ZauberTabelleInhaltB{}
+
+% neuen Zauber hinzufügen
+% Argumente sind:
+%	 1: Zaubername
+%	 2: Probe Eig. 1
+%	 3: Probe Eig. 2
+%	 4: Probe Eig. 3
+%	 5: ZfW
+%	 6: ZD
+%	 7: Kosten
+%	 8: Reichweite
+%	 9: WD
+%	10: Anmerkungen
+%	11: Komplexität
+%	12: Repräsentation
+%	13: Hauszauber?
+%	14: Lern
+\newcommand{\neuerZauber}[9]{%
+\addtocounter{ZauberAnzahl}{1}
+\ifnum\value{ZauberAnzahl}>32\g@addto@macro\ZauberTabelleInhaltB{ & #1 & #2 $\bullet$ #3 $\bullet$ #4 & #5 & & #6 & #7 & #8 & #9 &}
+\else\g@addto@macro\ZauberTabelleInhaltA{ & #1 & #2 $\bullet$ #3 $\bullet$ #4 & #5 & & #6 & #7 & #8 & #9 &}
+\fi
+\neuerZauberCont
+}
+\newcommand{\neuerZauberCont}[5]{%
+\ifnum\value{ZauberAnzahl}>32\g@addto@macro\ZauberTabelleInhaltB{ #1 & #2 & #3 & #4 & #5\\\hline}
+\else\g@addto@macro\ZauberTabelleInhaltA{ #1 & #2 & #3 & #4 & #5\\\hline}
+\fi
+}
+
+\makeatother

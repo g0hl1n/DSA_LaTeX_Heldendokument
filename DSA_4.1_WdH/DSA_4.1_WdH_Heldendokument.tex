@@ -32,6 +32,7 @@
 \usepackage{amssymb}
 \usepackage{xstring} % for some fancy string functions
 \usepackage{lscape} % for single landscape pages
+\usepackage{forloop}
 
 %----------------------------------------------------------------------------------------
 %	KONFIGURATION DES DOKUMENTS (Layout, Farben & Metadaten)
@@ -81,6 +82,7 @@
   \noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}%
 }
 
+\include{Commandset} % Commandset laden
 %----------------------------------------------------------------------------------------
 %	BEGINN DES DOKUMENTS
 %----------------------------------------------------------------------------------------
@@ -95,6 +97,12 @@
 \include{Seite_3} % dritte Seite (Waffen & Kampfwerte)
 \newpage
 \include{Seite_4} % vierte Seite (Ausrüstung, Vermögen & Verbindungen)
-\newpage
-\include{Seite_5} % fünfte Seite (Zauberdokument 1)
+\ifnum\value{ZauberAnzahl}>0
+	\newpage
+	\include{Seite_5} % fünfte Seite (Zauberdokument 1)
+\fi
+\ifnum\value{ZauberAnzahl}>33
+	\newpage
+	\include{Seite_6} % sechste Seite (Zauberdokument 2)
+\fi
 \end{document}

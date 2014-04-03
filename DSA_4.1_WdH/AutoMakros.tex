@@ -34,37 +34,16 @@
 \def \KampfwerteKampfExtraJ{\makebox[2.5mm][c]{\TalentKampfExtraJAT}\KampfwerteTrenner\makebox[2.5mm][c]{\TalentKampfExtraJPA}}
 
 %----------------------------
-%	Zauberzeug
-\def \ZauberTabelleInhaltA{&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\\hline
-&&&&&&&&&&&&&&&\\}
+%	Zauberbefüllung
+\makeatletter
+\newcounter{ZauberCounter}
+\ifnum\value{ZauberAnzahl}>32
+	\forloop[1]{ZauberCounter}{\value{ZauberAnzahl}}{\value{ZauberCounter} < 66}{%
+		\g@addto@macro\ZauberTabelleInhaltB{&&&&&&&&&&&&&\\\hline}%
+	}
+\else
+	\forloop{ZauberCounter}{\value{ZauberAnzahl}}{\value{ZauberCounter} < 33}{%
+		\g@addto@macro\ZauberTabelleInhaltA{&&&&&&&&&&&&&\\\hline}%
+	}
+\fi
+\makeatother
