@@ -1,6 +1,86 @@
 \makeatletter
 
-%----------------------------
+%--------------------------------------------------------------------
+%	Talentzeug
+\newcounter{TalentAnzahl}
+%
+% Talent: \neuesTalent{Typ}
+\newcommand{\neuesTalent}[1]{%
+	\addtocounter{TalentAnzahl}{1}
+	\IfEqCase{#1}%
+	{Kampf}{\neuesTalentKampf}%
+	{Koerper}{\neuesTalentKoerper}%
+	{Gesellschaft}{\neuesTalentGesellschaft}%
+	{Natur}{\neuesTalentNatur}%
+	{Wissen}{\neuesTalentWissen}%
+	{Handwerk}{\neuesTalentHandwerk}%
+	{Sprachen}{\neuesTalentSprachen}
+}
+%
+% Kampftalent
+\newcounter{TalentAnzahlKampf}
+\def\TalentTabelleInhaltKampf{}
+% command => \neuesTalentKampf{Name}{TaW}{AT}{PA}{BE}{Steigerung}
+\newcommand{\neuesTalentKampf}[6]{%
+	\addtocounter{TalentAnzahlKampf}{1}
+	\g@addto@macro\TalentTabelleInhaltKampf{#1 & #6 & #5 & #3 $\bullet$ #4 & #2 &\\\hline}
+}
+%
+% Körperliches Talent
+\newcounter{TalentAnzahlKoerper}
+\def\TalentTabelleInhaltKoerper{}
+% command => \neuesTalentKoerper{Name}{Eig.1}{Eig.2}{Eig.3}{TaW}{BE}
+\newcommand{\neuesTalentKoerper}[6]{%
+	\addtocounter{TalentAnzahlKoerper}{1}
+	\g@addto@macro\TalentTabelleInhaltKoerper{#1 (#2 $\bullet$ #3 $\bullet$ #4) & #6 & #5 &\\\hline}
+}
+%
+% Gesellschaftliches Talent
+\newcounter{TalentAnzahlGesellschaft}
+\def\TalentTabelleInhaltGesellschaft{}
+% command => \neuesTalentGesellschaft{Name}{Eig.1}{Eig.2}{Eig.3}{TaW}
+\newcommand{\neuesTalentGesellschaft}[5]{%
+	\addtocounter{TalentAnzahlGesellschaft}{1}
+	\g@addto@macro\TalentTabelleInhaltGesellschaft{#1 (#2 $\bullet$ #3 $\bullet$ #4) & #5 &\\\hline}
+}
+%
+% Natur-Talent
+\newcounter{TalentAnzahlNatur}
+\def\TalentTabelleInhaltNatur{}
+% command => \neuesTalentNatur{Name}{Eig.1}{Eig.2}{Eig.3}{TaW}
+\newcommand{\neuesTalentNatur}[5]{%
+	\addtocounter{TalentAnzahlNatur}{1}
+	\g@addto@macro\TalentTabelleInhaltNatur{#1 (#2 $\bullet$ #3 $\bullet$ #4) & #5 &\\\hline}
+}
+%
+% Wissens Talent
+\newcounter{TalentAnzahlWissen}
+\def\TalentTabelleInhaltWissen{}
+% command => \neuesTalentWissen{Name}{Eig.1}{Eig.2}{Eig.3}{TaW}
+\newcommand{\neuesTalentWissen}[5]{%
+	\addtocounter{TalentAnzahlWissen}{1}
+	\g@addto@macro\TalentTabelleInhaltWissen{#1 (#2 $\bullet$ #3 $\bullet$ #4) & #5 &\\\hline}
+}
+%
+% Handwerkliches Talent
+\newcounter{TalentAnzahlHandwerk}
+\def\TalentTabelleInhaltHandwerk{}
+% command => \neuesTalentHandwerk{Name}{Eig.1}{Eig.2}{Eig.3}{TaW}
+\newcommand{\neuesTalentHandwerk}[5]{%
+	\addtocounter{TalentAnzahlHandwerk}{1}
+	\g@addto@macro\TalentTabelleInhaltHandwerk{#1 (#2 $\bullet$ #3 $\bullet$ #4) & #5 &\\\hline}
+}
+%
+% Sprachen Talent
+\newcounter{TalentAnzahlSprachen}
+\def\TalentTabelleInhaltSprachen{}
+% command => \neuesTalentSprachen{Name}{Kompl.}{TaW}
+\newcommand{\neuesTalentSprachen}[3]{%
+	\addtocounter{TalentAnzahlSprachen}{1}
+	\g@addto@macro\TalentTabelleInhaltSprachen{#1 & #2 & #3 &\\\hline}
+}
+
+%--------------------------------------------------------------------
 %	Zauberzeug
 \newcounter{ZauberAnzahl}
 \def\ZauberTabelleInhaltA{}
