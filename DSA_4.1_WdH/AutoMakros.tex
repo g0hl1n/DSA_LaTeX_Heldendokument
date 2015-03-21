@@ -27,6 +27,45 @@
 \setcounter{cKKaktuell}{\EigKKmod + \EigKKstart + \EigKKgesteigert}
 \def \EigKKaktuell{\arabic{cKKaktuell}}
 
+% Berechnung der abgeleiteten Grundwerte
+\newcounter{cLePstart} % Lebenspunkte: (KO + KO + KK)/2
+\setcounter{cLePstart}{(\EigMUaktuell + \EigMUaktuell + \EigKKaktuell + 1) / 2}
+\def \BasisLEstart{\arabic{cLePstart}}
+\newcounter{cLePmaxZ}
+\setcounter{cLePmaxZ}{0}
+\def \BasisLEmaxZugekauft{\arabic{cLePmaxZ}}
+\newcounter{cLePaktuell}
+\setcounter{cLePaktuell}{\BasisLEmod + \BasisLEstart + \BasisLEzugekauft}
+\def \BasisLEaktuell{\arabic{cLePaktuell}}
+\newcounter{cLePhaelfte}
+\setcounter{cLePhaelfte}{(\BasisLEaktuell + 1) / 2}
+\def \BasisLEaktuellHaelfte{\arabic{cLePhaelfte}}
+\newcounter{cLePdrittel}
+\setcounter{cLePdrittel}{(\BasisLEaktuell + 1) / 3}
+\def \BasisLEaktuellDrittel{\arabic{cLePdrittel}}
+\newcounter{cLePviertel}
+\setcounter{cLePviertel}{(\BasisLEaktuell + 2) / 4}
+\def \BasisLEaktuellViertel{\arabic{cLePviertel}}
+
+\newcounter{cAuPstart} % Ausdauer: (MU + KO + GE)/2
+\setcounter{cAuPstart}{(\EigMUaktuell + \EigKOaktuell + \EigGEaktuell + 1) / 2}
+\def \BasisAUstart{\arabic{cAuPstart}}
+\newcounter{cAuPmaxZ}
+\setcounter{cAuPmaxZ}{0}
+\def \BasisAUmaxZugekauft{\arabic{cAuPmaxZ}}
+\newcounter{cAuPaktuell}
+\setcounter{cAuPaktuell}{\BasisAUmod + \BasisAUstart + \BasisAUzugekauft}
+\def \BasisAUaktuell{\arabic{cAuPaktuell}}
+\newcounter{cAuPhaelfte}
+\setcounter{cAuPhaelfte}{(\BasisAUaktuell + 1) / 2}
+\def \BasisAUaktuellHaelfte{\arabic{cAuPhaelfte}}
+\newcounter{cAuPdrittel}
+\setcounter{cAuPdrittel}{(\BasisAUaktuell + 1) / 3}
+\def \BasisAUaktuellDrittel{\arabic{cAuPdrittel}}
+\newcounter{cAuPviertel}
+\setcounter{cAuPviertel}{(\BasisAUaktuell + 2) / 4}
+\def \BasisAUaktuellViertel{\arabic{cAuPviertel}}
+
 % dieses Makro gibt das Zeichen für eine Sonderfertigkeit zurück
 % Also angekreuzt wenn gewählt und leer wenn nicht
 \def \dasKreuzchen{$\boxtimes$}%<-- das Kreuzchen Symbol
