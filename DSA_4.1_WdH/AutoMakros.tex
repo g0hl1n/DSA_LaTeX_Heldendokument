@@ -66,6 +66,57 @@
 \setcounter{cAuPviertel}{(\BasisAUaktuell + 2) / 4}
 \def \BasisAUaktuellViertel{\arabic{cAuPviertel}}
 
+\newcounter{cAEstart} % Astralenergie: (MU + IN + CH) / 2
+\setcounter{cAEstart}{(\EigMUaktuell + \EigINaktuell + \EigCHaktuell + 1) / 2}
+\def \BasisAEstart{\arabic{cAEstart}}
+\def \BasisAEmaxZugekauft{\EigCHaktuell}
+\newcounter{cAEaktuell}
+\setcounter{cAEaktuell}{\BasisAEmod + \BasisAEstart + \BasisAEzugekauft}
+\def \BasisAEaktuell{\arabic{cAEaktuell}}
+
+\newcounter{cMRstart} % Magieresistenz: (MU + KL + KO) / 5
+\setcounter{cMRstart}{(\EigMUaktuell + \EigKLaktuell + \EigKOaktuell + 3) / 5}
+\def \BasisMRstart{\arabic{cMRstart}}
+\newcounter{cMRmaxZ}
+\setcounter{cMRmaxZ}{(\EigMUaktuell + 1) / 2}
+\def \BasisMRmaxZugekauft{\arabic{cMRmaxZ}}
+\newcounter{cMRaktuell}
+\setcounter{cMRaktuell}{\BasisMRmod + \BasisMRstart + \BasisMRzugekauft}
+\def \BasisMRaktuell{\arabic{cMRaktuell}}
+
+\newcounter{cINIstart} % Initiative-Basis: (MU + MU + IN + GE) / 5
+\setcounter{cINIstart}{(\EigMUaktuell + \EigMUaktuell + \EigINaktuell + \EigGEaktuell + 3) / 5}
+\def \BasisINIstart{\arabic{cINIstart}}
+%TODO SF einberechnen
+\newcounter{cINIaktuell}
+\setcounter{cINIaktuell}{\BasisINImod + \BasisINIstart}
+\def \BasisINIaktuell{\arabic{cINIaktuell}}
+
+\newcounter{cATstart} % Angriff-Basis: (MU + GE + KK) / 5
+\setcounter{cATstart}{(\EigMUaktuell + \EigGEaktuell + \EigKKaktuell + 3) / 5}
+\def \BasisATstart{\arabic{cATstart}}
+\newcounter{cATaktuell}
+\setcounter{cATaktuell}{\BasisATmod + \BasisATstart}
+\def \BasisATaktuell{\arabic{cATaktuell}}
+
+\newcounter{cPAstart} % Parade-Basis: (IN + GE + KK) / 5
+\setcounter{cPAstart}{(\EigINaktuell + \EigGEaktuell + \EigKKaktuell + 3) / 5}
+\def \BasisPAstart{\arabic{cPAstart}}
+\newcounter{cPAaktuell}
+\setcounter{cPAaktuell}{\BasisPAmod + \BasisPAstart}
+\def \BasisPAaktuell{\arabic{cPAaktuell}}
+
+\newcounter{cFKstart} % Fernkampf-Basis: (IN + FF + KK) / 5
+\setcounter{cFKstart}{(\EigINaktuell + \EigFFaktuell + \EigKKaktuell + 3) / 5}
+\def \BasisFKstart{\arabic{cFKstart}}
+\newcounter{cFKaktuell}
+\setcounter{cFKaktuell}{\BasisFKmod + \BasisFKstart}
+\def \BasisFKaktuell{\arabic{cFKaktuell}}
+
+\newcounter{cWSstart} % Wundschwelle: KO / 2
+\setcounter{cWSstart}{(\EigKOaktuell + 1) / 2}
+\def \BasisWundschwelle{\arabic{cWSstart}}
+
 % dieses Makro gibt das Zeichen für eine Sonderfertigkeit zurück
 % Also angekreuzt wenn gewählt und leer wenn nicht
 \def \dasKreuzchen{$\boxtimes$}%<-- das Kreuzchen Symbol
