@@ -1,5 +1,32 @@
 %----------------------------
 %	The fancy stuff
+
+% Grundwerte
+\newcounter{cMUaktuell}
+\setcounter{cMUaktuell}{\EigMUmod + \EigMUstart + \EigMUgesteigert}
+\def \EigMUaktuell{\arabic{cMUaktuell}}
+\newcounter{cKLaktuell}
+\setcounter{cKLaktuell}{\EigKLmod + \EigKLstart + \EigKLgesteigert}
+\def \EigKLaktuell{\arabic{cKLaktuell}}
+\newcounter{cINaktuell}
+\setcounter{cINaktuell}{\EigINmod + \EigINstart + \EigINgesteigert}
+\def \EigINaktuell{\arabic{cINaktuell}}
+\newcounter{cCHaktuell}
+\setcounter{cCHaktuell}{\EigCHmod + \EigCHstart + \EigCHgesteigert}
+\def \EigCHaktuell{\arabic{cCHaktuell}}
+\newcounter{cFFaktuell}
+\setcounter{cFFaktuell}{\EigFFmod + \EigFFstart + \EigFFgesteigert}
+\def \EigFFaktuell{\arabic{cFFaktuell}}
+\newcounter{cGEaktuell}
+\setcounter{cGEaktuell}{\EigGEmod + \EigGEstart + \EigGEgesteigert}
+\def \EigGEaktuell{\arabic{cGEaktuell}}
+\newcounter{cKOaktuell}
+\setcounter{cKOaktuell}{\EigKOmod + \EigKOstart + \EigKOgesteigert}
+\def \EigKOaktuell{\arabic{cKOaktuell}}
+\newcounter{cKKaktuell}
+\setcounter{cKKaktuell}{\EigKKmod + \EigKKstart + \EigKKgesteigert}
+\def \EigKKaktuell{\arabic{cKKaktuell}}
+
 % dieses Makro gibt das Zeichen für eine Sonderfertigkeit zurück
 % Also angekreuzt wenn gewählt und leer wenn nicht
 \def \dasKreuzchen{$\boxtimes$}%<-- das Kreuzchen Symbol
