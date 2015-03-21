@@ -32,7 +32,7 @@
 \setcounter{cLePstart}{(\EigMUaktuell + \EigMUaktuell + \EigKKaktuell + 1) / 2}
 \def \BasisLEstart{\arabic{cLePstart}}
 \newcounter{cLePmaxZ}
-\setcounter{cLePmaxZ}{0}
+\setcounter{cLePmaxZ}{(\EigKOaktuell + 1) / 2}
 \def \BasisLEmaxZugekauft{\arabic{cLePmaxZ}}
 \newcounter{cLePaktuell}
 \setcounter{cLePaktuell}{\BasisLEmod + \BasisLEstart + \BasisLEzugekauft}
@@ -51,7 +51,7 @@
 \setcounter{cAuPstart}{(\EigMUaktuell + \EigKOaktuell + \EigGEaktuell + 1) / 2}
 \def \BasisAUstart{\arabic{cAuPstart}}
 \newcounter{cAuPmaxZ}
-\setcounter{cAuPmaxZ}{0}
+\setcounter{cAuPmaxZ}{\EigKOaktuell}
 \def \BasisAUmaxZugekauft{\arabic{cAuPmaxZ}}
 \newcounter{cAuPaktuell}
 \setcounter{cAuPaktuell}{\BasisAUmod + \BasisAUstart + \BasisAUzugekauft}
