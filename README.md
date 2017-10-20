@@ -13,6 +13,9 @@ Alle Versionsbundles können unter https://github.com/g0hl1n/DSA_LaTeX_Heldendok
 Ein stark an das DSA 4.1 "Wege der Helden" angelehntes Heldendokument.
 Das Original kann auf der Homepage von Ulisses Spiele unter folgendem Link heruntergeladen werden: http://www.ulisses-spiele.de/download/559/
 
+## DSA_5_RWv2 - "DSA 5 Regelwerk V2" ##
+Ein stark an das DSA 5 "Regelwerk V2" angelehntes Heldendokument.
+
 #### Konfiguration ####
 Die Konfiguration dieses Heldendokuments erfolgt über die CharakterKonfiguration.tex Datei mithilfe von einfachen LaTeX Defines.
 Wenn das Heldendokument ausgefüllt bzw. verändert werden soll, braucht man nur diese Datei editieren!

@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DSA 5 Heldendokument by g0hl1n
+%   Source:  https://github.com/g0hl1n/DSA_LaTeX_Heldendokument
+%   Author:  Richard 'g0hl1n' Leitner <me@g0hl1n.net>
+%   Version: 1.0
+%   Updated: Fri 20 Oct 2017
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% Version des Dokuments:
+\def \version{1.0}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{geometry} % for page dimensions
+\usepackage{fancyhdr} % for custom (fancy) headers and footers
+\usepackage{lastpage} % for pagecount
+\usepackage{graphicx} % for embedding graphics
+\usepackage{hyperref} % for urls and their appearence
+\usepackage{color}    % for colored text
+\usepackage{graphicx} % Required for including pictures
+\usepackage{float}    % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig}  % Allows in-line images such as the example fish picture
+\usepackage[table,usenames,dvipsnames]{xcolor} % for own color definitions and tables
+\usepackage{colortbl}
+\usepackage{multirow} % for multirowed columns in tables
+\usepackage{booktabs} % table rule magic
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{xstring} % for some fancy string functions
+\usepackage{lscape} % for single landscape pages
+\usepackage{forloop}
+\usepackage{calc}
+
+%----------------------------------------------------------------------------------------
+%	KONFIGURATION DES DOKUMENTS (Layout, Farben & Metadaten)
+%----------------------------------------------------------------------------------------
+\geometry{top=2mm,left=10mm,right=10mm,bottom=2mm,headsep=0mm,footskip=0mm} % Seitenränder
+
+\linespread{1} % Zeilenabstand=1
+\graphicspath{{./img/}} % setzt den Pfad zu Grafiken
+
+% Hyperlink Metadata & Link Konfiguration
+\hypersetup{
+	pdftitle={DSA 5 Heldendokument},
+	pdfauthor={Richard 'g0hl1n' Leitner},
+	pdfsubject={Das Schwarze Auge},
+	pdfkeywords={DSA} {Heldendokument} {LaTeX},
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+%-----------------------------------
+% Seitenlayout:
+\pagestyle{empty} % "Leeres" Seitenlayout (keine Kopf- & Fußzeilen)
+\def \footline{DSA-5 RWv2 \LaTeX\ Heldendokument v\version\ by g0hl1n - \url{https://github.com/g0hl1n/DSA_LaTeX_Heldendokument} - \today}
+
+%-----------------------------------
+% Farben:
+\definecolor{titlepagelinecolor}{HTML}{707070} % Grau
+
+%-----------------------------------
+% (globale) Tabellenkonfiguration:
+\renewcommand{\arraystretch}{1.4} % Abstand zwischen Zellen
+
+%----------------------------------------------------------------------------------------
+%	DEFINITION EIGENER KOMMANDOS
+%----------------------------------------------------------------------------------------
+% VRule
+\newcommand\VRule[1][\arrayrulewidth]{\vrule width #1}
+
+% Cline ... eine cline mit konfigurierbarer Dicke
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{%
+  \noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+  \noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}%
+  \noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}%
+}
+
+%----------------------------------------------------------------------------------------
+%	BEGINN DES DOKUMENTS
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\include{Seite_1} % erste Seite (Persönliche Daten, Vorteile, Nachteile, Grundwerte, Allg. SF, Schicksalspunkte)
+\end{document}
